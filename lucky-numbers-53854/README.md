@@ -1,4 +1,6 @@
-![terminal preview](shot1.png)![preview](shot2.png)
+# Lucky Numbers Game
+
+![terminal preview](images/shot1.png)![terminal preview](images/shot2.png)
 
 My first development project in java language. It's obviously a project that requires some improvement especially on the tests section that I wrote.
 
