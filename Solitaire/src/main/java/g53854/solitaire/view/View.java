@@ -45,7 +45,7 @@ public class View {
     }
 
     public void actionChoice() {
-        String answer = Utils.readString("\n Would you like to put the card on the board ?");
+        String answer = Utils.readString("\n Would you like to put the card on the board [Y/N] ?");
         if (answer.equalsIgnoreCase("Y")) {
             game.put(this.askPosition());
         } else {
