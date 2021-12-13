@@ -9,7 +9,8 @@ import java.util.Objects;
  */
 public class Position {
 
-    private int row, column;
+    private final int row;
+    private final int column;
 
     /**
      * Constructor of Position.
