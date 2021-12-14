@@ -54,4 +54,14 @@ public class Position {
     public int hashCode() {
         return Objects.hash(getRow(), getColumn());
     }
+
+    /**
+     * Provides the position according to the received direction.
+     *
+     * @param direction received direction
+     * @return position
+     */
+    public Position next(Direction direction) {
+        return new Position(this.row + direction.getDeltaRow(), this.column + direction.getDeltaColumn());
+    }
 }
