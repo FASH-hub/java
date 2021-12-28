@@ -28,8 +28,8 @@ public class Board {
     public static Board getInitialBoard() {
 
         Square[][] gameTiles = {
-                {new Square(SquareType.GRAS), new Square(SquareType.GRAS), new Square(null)},
-                {new Square(null), new Square(SquareType.GRAS), new Square(SquareType.GRAS)},
+                {new Square(SquareType.GRASS), new Square(SquareType.GRASS), new Square(null)},
+                {new Square(null), new Square(SquareType.GRASS), new Square(SquareType.GRASS)},
                 {new Square(null), new Square(null), new Square(SquareType.STAR)}
         };
 

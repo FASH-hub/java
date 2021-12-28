@@ -7,5 +7,5 @@ package model;
  * @author Léon FASHINGABO <fashingaboleon@gmail.com>
  */
 public enum SquareType {
-    GRAS, STAR;
+    GRASS, STAR;
 }
