@@ -77,6 +77,11 @@ public class Board {
      * @return type of square
      */
     public SquareType getSquareType(Position position) {
+
+        if (position == null || this.squares[position.getRow()][position.getColumn()] == null) {
+            throw new IllegalArgumentException("Position cannot be null");
+        }
+
         return this.squares[position.getRow()][position.getColumn()].getType();
     }
 
