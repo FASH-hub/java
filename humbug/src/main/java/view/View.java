@@ -4,7 +4,12 @@ import model.Board;
 import model.Direction;
 import model.Position;
 
-public class View implements InterfaceView{
+import java.util.Locale;
+
+import static usefulCodes.Useful.readInt;
+import static usefulCodes.Useful.readString;
+
+public class View implements InterfaceView {
     /**
      * Displays the game's board and the required information for the game.
      * Animals on the board are also displayed
@@ -23,7 +28,11 @@ public class View implements InterfaceView{
      */
     @Override
     public Position askPosition() {
-        return null;
+
+        int row = readInt("Please enter the row value", 1, 3) - 1;
+        int col = readInt("Please enter the column value", 1, 3) - 1;
+
+        return new Position(row, col);
     }
 
     /**
@@ -33,7 +42,19 @@ public class View implements InterfaceView{
      */
     @Override
     public Direction askDirection() {
-        return null;
+
+        String dir = readString("Enter Direction: 'N' for (North), 'S' for (South), 'E' for (East), 'W' for (West): ")
+                .toUpperCase();
+        Direction direction = null;
+
+        switch (dir) {
+            case "N" -> direction = Direction.NORTH;
+            case "S" -> direction = Direction.SOUTH;
+            case "E" -> direction = Direction.EAST;
+            case "W" -> direction = Direction.WEST;
+            default -> displayError("Please enter a valid direction (N, S, E, W)");
+        }
+        return direction;
     }
 
     /**
@@ -43,6 +64,6 @@ public class View implements InterfaceView{
      */
     @Override
     public void displayError(String message) {
-
+        System.err.println(message);
     }
 }
