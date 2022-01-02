@@ -4,7 +4,6 @@ import model.Board;
 import model.Direction;
 import model.Position;
 
-import java.util.Locale;
 
 import static usefulCodes.Useful.readInt;
 import static usefulCodes.Useful.readString;
@@ -18,19 +17,26 @@ public class View implements InterfaceView {
      */
     @Override
     public void displayBoard(Board board) {
+        StringBuilder display = new StringBuilder();
 
     }
 
     /**
      * Asks the user to enter a certain position.
+     * We suppose that the user counts from 1
      *
      * @return position entered by the user
      */
     @Override
     public Position askPosition() {
 
-        int row = readInt("Please enter the row value", 1, 3) - 1;
-        int col = readInt("Please enter the column value", 1, 3) - 1;
+        final int minRow = 1;
+        final int maxRow = Board.getInitialBoard().getNbRow();
+        final int minCol = 1;
+        final int maxCol = Board.getInitialBoard().getNbColumn();
+
+        int row = readInt("Please enter the row value", minRow, maxRow) - 1;
+        int col = readInt("Please enter the column value", minCol, maxCol) - 1;
 
         return new Position(row, col);
     }
