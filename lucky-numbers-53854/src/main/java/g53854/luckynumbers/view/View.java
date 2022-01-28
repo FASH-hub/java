@@ -1,5 +1,6 @@
 package g53854.luckynumbers.view;
 
+import g53854.luckynumbers.model.Board;
 import g53854.luckynumbers.model.Model;
 import g53854.luckynumbers.model.Position;
 import g53854.luckynumbers.model.Tile;
@@ -83,6 +84,7 @@ public class View implements InterfaceView {
     @Override
     public void displayWinner() {
         var champion = game.getWinners();
+
         System.out.println(" The winner is player number " + champion);
     }
 
@@ -167,7 +169,6 @@ public class View implements InterfaceView {
         }
 
     }
-
 
     /**
      * Displays the number of face down tiles.

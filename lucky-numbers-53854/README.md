@@ -4,9 +4,9 @@
 
 My first development project in java language. It's obviously a project that requires some improvement especially on the tests section that I wrote.
 
-This is to reproduce the famous game __*Lucky Numbers*__ which consists of 2 to 4 players each with their own game board.
+This is to reproduce the famous game __*Lucky Numbers*__ which consists of 2 to 4 players, each with his own game board.
 
-the rules of the game can be viewed at the link above
+the rules of the game can be viewed at the link below
 [Règles de jeu](https://cdn.1j1ju.com/medias/97/b9/d7-lucky-numbers-regle.pdf).
 
 The project is carried out in the MVC format. So there are Model, View and Controller packages each having different classes and a separate class containing the main () method of the whole project.

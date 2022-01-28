@@ -82,6 +82,7 @@ public interface Model {
      */
     int getCurrentPlayerNumber();
 
+
     /**
      * Get the current picked tile. Get the tile picked by the current player.
      *

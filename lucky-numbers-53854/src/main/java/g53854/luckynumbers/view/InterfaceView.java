@@ -1,5 +1,6 @@
 package g53854.luckynumbers.view;
 
+import g53854.luckynumbers.model.Board;
 import g53854.luckynumbers.model.Position;
 import g53854.luckynumbers.model.Tile;
 

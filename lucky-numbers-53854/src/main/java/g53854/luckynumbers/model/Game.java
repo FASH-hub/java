@@ -90,6 +90,7 @@ public class Game implements Model {
     }
 
 
+
     /**
      * Put a tile at the given position. Put the previously picked tile of the
      * current player at the given position on its board.
