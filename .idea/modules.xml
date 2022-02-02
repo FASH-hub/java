@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Solitaire/dev2-interro.iml" filepath="$PROJECT_DIR$/Solitaire/dev2-interro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java_projects.iml" filepath="$PROJECT_DIR$/.idea/java_projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lucky-numbers-53854/lucky-numbers-g53854.iml" filepath="$PROJECT_DIR$/lucky-numbers-53854/lucky-numbers-g53854.iml" />
+    </modules>
+  </component>
+</project>
