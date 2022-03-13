@@ -1,5 +1,7 @@
 package chess.model;
 
+import java.util.Objects;
+
 /**
  * Represents a position on the game's board.
  * The position is formed with row and column values
@@ -37,5 +39,27 @@ public class Position {
      */
     public int getColumn() {
         return column;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Position position)) return false;
+        return getRow() == position.getRow() && getColumn() == position.getColumn();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getRow(), getColumn());
+    }
+
+    /**
+     * Gives the new position according to the received direction
+     *
+     * @param direction received direction
+     * @return new position
+     */
+    public Position next(Direction direction) {
+        return new Position(row + direction.getDeltaRow(), column + direction.getDeltaColumn());
     }
 }
