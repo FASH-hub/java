@@ -13,12 +13,12 @@ public class Position {
     /**
      * Creates a new position with the received values.
      *
-     * @param row    received row's value
-     * @param column received column's value
+     * @param xRow    received row's value
+     * @param xColumn received column's value
      */
-    public Position(int row, int column) {
-        this.row = row;
-        this.column = column;
+    public Position(int xRow, int xColumn) {
+        this.row = xRow;
+        this.column = xColumn;
     }
 
     /**
