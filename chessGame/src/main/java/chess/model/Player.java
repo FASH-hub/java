@@ -9,7 +9,7 @@ public class Player {
     private Color color;
 
     /**
-     * Initialises the player by the received color.
+     * Instantiates the player with the received color.
      *
      * @param color received to initialize the player
      */

@@ -9,7 +9,7 @@ public class Piece {
     private Color color;
 
     /**
-     * Initialises the piece by the received color.
+     * Instantiates the piece with the received color.
      *
      * @param color received color to initialize the piece
      */
