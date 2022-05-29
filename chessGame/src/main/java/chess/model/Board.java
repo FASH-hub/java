@@ -1,8 +1,8 @@
 package chess.model;
 
-import java.util.Arrays;
 
-import static chess.model.Color.WHITE;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Represents the game board.
@@ -17,14 +17,14 @@ public class Board {
      */
     public Board() {
         this.squares = new Square[][]{
-                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
-                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
-                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
-                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
-                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
-                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
-                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
-                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)}
+                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
+                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
+                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
+                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
+                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
+                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
+                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)},
+                {new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null), new Square(null)}
         };
     }
 
@@ -52,10 +52,94 @@ public class Board {
             case BLACK -> 6;
         };
     }
-    public void setPiece(Piece piece, Position pos){
-        if (!contains(pos)){
-            throw new IllegalArgumentException("Position is out of board");
+
+    /**
+     * Gives the pawn standing at the specified position.
+     *
+     * @param pos received position containing the pawn
+     * @return the pawn (piece)
+     */
+    public Piece getPiece(Position pos) {
+
+        if (!contains(pos)) {
+            throw new IllegalArgumentException("Received position is out of board");
         }
-       // Arrays.stream(this.squares).filter();
+        return squares[pos.getRow()][pos.getColumn()].getPiece();
+    }
+
+    /**
+     * Puts the received pawn on the specified square and right position.
+     *
+     * @param piece the pawn to be placed
+     * @param pos   the square's position on the board
+     */
+    public void setPiece(Piece piece, Position pos) {
+
+        if (!contains(pos)) {
+            throw new IllegalArgumentException("Received position is out of board");
+        }
+        squares[pos.getRow()][pos.getColumn()].setPiece(piece);
+    }
+
+    /**
+     * Removes the pawn contained on the specified square's position.
+     *
+     * @param pos square's position
+     */
+    public void dropPiece(Position pos) {
+
+        if (!contains(pos)) {
+            throw new IllegalArgumentException("Received position is out of board");
+        }
+        squares[pos.getRow()][pos.getColumn()] = new Square(null);
+    }
+
+    /**
+     * Checks if the square at the received position is not occupied.
+     *
+     * @param pos received square's position
+     * @return true
+     */
+    public boolean isFree(Position pos) {
+
+        if (!contains(pos)) {
+            throw new IllegalArgumentException("Received position is out of board");
+        }
+        return squares[pos.getRow()][pos.getColumn()].isFree();
+    }
+
+    /**
+     * Checks if the pawn contained at the received square's position
+     * has the opposite color from the one received
+     *
+     * @param pos   square's received position
+     * @param color received color to be checked
+     * @return true
+     */
+    public boolean containsOppositeColor(Position pos, Color color) {
+
+        if (!contains(pos)) {
+            throw new IllegalArgumentException("Received position is out of board");
+        }
+        return squares[pos.getRow()][pos.getColumn()].getPiece().getColor() != color;
+    }
+
+    /**
+     * Gives the list of occupied positions by the specified player.
+     * @param player specified player
+     * @return list of positions
+     */
+    public List<Position> getPositionsOccupiedBy(Player player){
+
+        List<Position> occupied = new ArrayList<>();
+        for (int i = 0; i < squares.length; i++) {
+            for (int j = 0; j < squares[i].length; j++) {
+                if (squares[i][j] != null && squares[i][j].getPiece().getColor() == player.getColor()) {
+                    occupied.add(new Position(i, j));
+                }
+            }
+        }
+        return occupied;
+
     }
 }
