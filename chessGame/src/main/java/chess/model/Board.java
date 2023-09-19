@@ -2,7 +2,10 @@ package chess.model;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Represents the game board.
@@ -131,7 +134,7 @@ public class Board {
      */
     public List<Position> getPositionsOccupiedBy(Player player){
 
-        List<Position> occupied = new ArrayList<>();
+ List<Position> occupied = new ArrayList<>();
         for (int i = 0; i < squares.length; i++) {
             for (int j = 0; j < squares[i].length; j++) {
                 if (squares[i][j] != null && squares[i][j].getPiece().getColor() == player.getColor()) {
@@ -140,6 +143,10 @@ public class Board {
             }
         }
         return occupied;
+        /*return Arrays.stream(squares)
+                        .filter(sq1 ->sq1.getPiece().getColor())
+                        .allMatch(player.getColor());*/
+
 
     }
 }
