@@ -25,7 +25,7 @@ public class Bag {
         for (int i = 0; i < tileList.size(); i++){
             tiles.addAll(0, tileList);
         }
-        Collections.shuffle(tiles);
+       // Collections.shuffle(tiles);
 
     }
 
