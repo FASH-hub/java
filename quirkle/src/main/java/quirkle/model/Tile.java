@@ -42,6 +42,12 @@ package quirkle.model;
         return color + " and has a shape of " + shape;
     }
 }*/
+
+/**
+ * Tile represents a game's tile.
+ * @param color represents the tile's color
+ * @param shape represents the tile's shape/form
+ */
 public record  Tile(Color color, Shape shape){
 
 }
