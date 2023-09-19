@@ -5,34 +5,34 @@ package quirkle.model;
  * color represents the tile's color
  * shape represents the tile's form
  */
-public final class Tile {
+/*public final class Tile {
 
     final private Color color;
     final private Shape shape;
 
 
-    /**
+    *//**
      * Creates tile's instance.
      * @param instanceColor received color tile's color
      * @param instanceShape received tile's form
-     */
+     *//*
     public Tile(Color instanceColor, Shape instanceShape) {
         this.color = instanceColor;
         this.shape = instanceShape;
     }
 
-    /**
+    *//**
      * retrieves the tile's color
      * @return tile's color
-     */
+     *//*
     public Color getColor() {
         return color;
     }
 
-    /**
+    *//**
      * retrieves the tile's form
      * @return tile's shape
-     */
+     *//*
     public Shape getShape() {
         return shape;
     }
@@ -41,4 +41,7 @@ public final class Tile {
     public String toString() {
         return color + " and has a shape of " + shape;
     }
+}*/
+public record  Tile(Color color, Shape shape){
+
 }
