@@ -1,11 +1,9 @@
-import quirkle.model.Color;
-import quirkle.model.Shape;
-import quirkle.model.Tile;
+import static quirkle.model.Bag.bag;
 
 public class Main {
-    public static void main(String[] args) {
 
-        Tile tile = new Tile(Color.BLUE, Shape.DIAMOND);
-        System.out.println(tile);
+    public static void main(String[] args) {
+        System.out.println(bag.getRandomTile());
+        System.out.println("Count of remaining : " + bag.size() + " tiles ");
     }
 }

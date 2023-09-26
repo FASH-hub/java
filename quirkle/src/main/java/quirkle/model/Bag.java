@@ -13,20 +13,16 @@ import java.util.stream.Stream;
  * As we have 6 different colors and 6 different shapes, the is supposed to contain 36 different tiles
  */
 public class Bag {
-    List<Tile> tiles;
-     Bag() {
+    public static final Bag bag = new Bag();
+    List<Tile> tileList;
+    private Bag() {
 
-        List<Tile> tileList;
+
         tileList = Stream.iterate(1, j->j+1)
                 .map(Tile -> new Tile(Color.values()[new Random().nextInt(Color.values().length)], Shape.values()[new Random().nextInt(Color.values().length)]))
                 .limit(108)
                 .collect(Collectors.toList());
-        List<Tile> tiles = new ArrayList<>();
-        for (int i = 0; i < tileList.size(); i++){
-            tiles.addAll(0, tileList);
-        }
-       // Collections.shuffle(tiles);
-
+        Collections.shuffle(tileList);
     }
 
     /**
@@ -34,8 +30,8 @@ public class Bag {
      * @return tile
      */
     public  Tile getRandomTile(){
-        Random randomTile = new Random();
-        return tiles.get(randomTile.nextInt());
+        int lastIndex = this.tileList.size() - 1;
+        return this.tileList.remove(lastIndex);
     }
 
     /**
@@ -43,7 +39,7 @@ public class Bag {
      * @return bag of tiles
      */
     public Bag getInstance(){
-      return new Bag();
+      return bag;
     }
 
     /**
@@ -51,6 +47,8 @@ public class Bag {
      * @return size of the bag
      */
     public  int size(){
-        return this.tiles.size();
+        return this.tileList.size();
     }
+
 }
+
