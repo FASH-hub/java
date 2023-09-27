@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2e62c3-5326-45ed-b8ef-02c707b14c6c" name="Changes" comment="" />
+    <list default="true" id="df2e62c3-5326-45ed-b8ef-02c707b14c6c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../quirkle/src/main/java/quirkle/model/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/model/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/model/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/model/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/view/InterfaceView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/view/InterfaceView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/view/View.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,13 +43,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/leonfashingabo/java_projects/lucky-numbers-53854"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/leonfashingabo/java_projects/lucky-numbers-53854&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="LuckyNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="g53854.luckynumbers.LuckyNumbers" />
+      <module name="lucky-numbers-g53854" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="g53854.luckynumbers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LuckyNumbers" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
