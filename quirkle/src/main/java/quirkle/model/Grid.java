@@ -5,24 +5,23 @@ package quirkle.model;
  */
 public class Grid {
 
-    private Tile [][] tiles;
-    private boolean isEmpty;
+    private Tile[][] tiles;
 
-    /**
-     * Instantiates the grid with listed tiles when the grid is empty.
-     * @param pieces array of tiles to be added to the grid
-     * @param empty checks if the grid is empty before adding tiles
-     */
-    public Grid(Tile[][] pieces, boolean empty) {
-        this.tiles = pieces;
-        this.isEmpty = empty;
+
+    public Grid() {
+        this.tiles = new Tile[27][27];
     }
 
     /**
      * Gives array of tiles to be added to the grid.
-      * @return array of tiles
+     *
+     * @return array of tiles
      */
-    public Tile[][] getTiles() {
-        return tiles;
+    public Tile getTiles(int row, int column) {
+        return null;
+    }
+
+    public void addFirst(Position position, Direction direction, Tile... tile) {
+
     }
 }

@@ -7,8 +7,8 @@ public enum Direction {
 
     DOWN(-1, 0), UP(1, 0), RIGHT(0, 1), LEFT(0, -1);
 
-    private int deltaRow;
-    private int deltaColumn;
+    private final int deltaRow;
+    private final int deltaColumn;
 
     Direction(int row, int column) {
         this.deltaRow = row;

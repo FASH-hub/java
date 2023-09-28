@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df2e62c3-5326-45ed-b8ef-02c707b14c6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../quirkle/src/main/java/quirkle/model/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/model/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/model/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/model/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/model/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/view/InterfaceView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/view/InterfaceView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/g53854/luckynumbers/view/View.class" afterDir="false" />
-    </list>
+    <list default="true" id="df2e62c3-5326-45ed-b8ef-02c707b14c6c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
