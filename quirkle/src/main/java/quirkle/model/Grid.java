@@ -1,4 +1,5 @@
 package quirkle.model;
+import static quirkle.model.Bag.*;
 
 /**
  * Represents the board of the game.
@@ -10,15 +11,15 @@ public class Grid {
 
     public Grid() {
         this.tiles = new Tile[27][27];
+
     }
 
     /**
-     * Gives array of tiles to be added to the grid.
-     *
-     * @return array of tiles
+     * Gives tile located at a specific position.
+     * @return tile
      */
-    public Tile getTiles(int row, int column) {
-        return null;
+    public Tile getTile(Position pos) {
+        return tiles[pos.row()][pos.column()];
     }
 
     public void addFirst(Position position, Direction direction, Tile... tile) {
