@@ -22,11 +22,11 @@ public class Bag {
                 .map(Tile -> new Tile(Color.values()[new Random().nextInt(Color.values().length)], Shape.values()[new Random().nextInt(Color.values().length)]))
                 .limit(108)
                 .collect(Collectors.toList());
-        Collections.shuffle(tileList);
+        //Collections.shuffle(tileList);
     }
 
     /**
-     * Retrieves the random tile from the bag.
+     * Retrieves a tile he from the bag, starting by the last on from the list.
      * @return tile
      */
     public  Tile getRandomTile(){
