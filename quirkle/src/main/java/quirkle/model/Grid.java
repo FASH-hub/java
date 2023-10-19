@@ -52,6 +52,16 @@ public class Grid {
             }
         }
     }
+    public void removeTile(Position position){
+        if (isInside(position)){
+
+            for (Tile[] tile:tiles){
+                for (Tile val: tile){
+                    tiles[position.row()][position.column()] = null;
+                }
+            }
+        }
+    }
 
     /**
      * Gives the number of grid's rows or columns.
